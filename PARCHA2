@@ -1,0 +1,325 @@
+index.html
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-container": "#fbddc8",
+                    "on-surface": "#363b12",
+                    "secondary-fixed-dim": "#eccfbb",
+                    "tertiary": "#6b6360",
+                    "inverse-surface": "#0e0f03",
+                    "on-tertiary-fixed": "#4e4644",
+                    "secondary-dim": "#695444",
+                    "surface-dim": "#e1e8a7",
+                    "on-primary-fixed-variant": "#715550",
+                    "surface-variant": "#e7edb4",
+                    "on-tertiary": "#ffffff",
+                    "primary-fixed": "#ffdad4",
+                    "surface-container-lowest": "#ffffff",
+                    "inverse-primary": "#fed7d0",
+                    "on-error-container": "#782232",
+                    "surface-container-highest": "#e7edb4",
+                    "secondary": "#766050",
+                    "error-dim": "#4f0116",
+                    "surface-bright": "#fefee5",
+                    "outline-variant": "#b8bd88",
+                    "error-container": "#ff8b9a",
+                    "surface-container-low": "#fafcda",
+                    "secondary-fixed": "#fbddc8",
+                    "on-secondary": "#ffffff",
+                    "primary-dim": "#674c47",
+                    "primary-container": "#ffdad4",
+                    "background": "#fefee5",
+                    "outline": "#7f8454",
+                    "surface": "#fefee5",
+                    "on-secondary-fixed-variant": "#6d5747",
+                    "tertiary-dim": "#5e5754",
+                    "primary": "#745853",
+                    "tertiary-fixed": "#faeeea",
+                    "on-tertiary-fixed-variant": "#6b6360",
+                    "on-secondary-container": "#624e3e",
+                    "on-primary-fixed": "#523935",
+                    "primary-fixed-dim": "#f2ccc5",
+                    "surface-tint": "#745853",
+                    "inverse-on-surface": "#9e9e88",
+                    "on-error": "#ffffff",
+                    "on-primary": "#fff6f4",
+                    "tertiary-fixed-dim": "#ece0dc",
+                    "tertiary-container": "#faeeea",
+                    "error": "#a54453",
+                    "surface-container-high": "#eef2c1",
+                    "on-secondary-fixed": "#4e3b2d",
+                    "surface-container": "#f4f7ce",
+                    "on-tertiary-container": "#605855",
+                    "on-surface-variant": "#63683a",
+                    "on-background": "#363b12",
+                    "on-primary-container": "#674b46"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Noto Serif"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; }
+        .serif-text { font-family: 'Noto Serif', serif; }
+        .linen-texture {
+            background-color: #fefee5;
+            background-image: radial-gradient(#74585311 0.5px, transparent 0.5px);
+            background-size: 4px 4px;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .text-shadow-soft {
+            text-shadow: 0 2px 4px rgba(116, 88, 83, 0.1);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface leading-relaxed">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#fefee5]/80 dark:bg-[#3E2723]/80 backdrop-blur-md">
+<div class="flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center space-x-4">
+<span class="material-symbols-outlined text-[#745853] cursor-pointer hover:opacity-80 transition-opacity">menu</span>
+<span class="font-['Noto_Serif'] font-bold text-[#3E2723] dark:text-[#fefee5] text-2xl tracking-tighter">PARCHA²</span>
+</div>
+<div class="hidden md:flex space-x-8">
+<a class="text-[#745853] font-bold font-['Noto_Serif'] text-xl tracking-tight hover:opacity-80 transition-opacity" href="#">Inicio</a>
+<a class="text-[#63683a] font-['Noto_Serif'] text-xl tracking-tight hover:opacity-80 transition-opacity" href="#catalogo">Catálogo</a>
+<a class="text-[#63683a] font-['Noto_Serif'] text-xl tracking-tight hover:opacity-80 transition-opacity" href="#personalizar">Personalizar</a>
+</div>
+<div class="flex items-center">
+<span class="material-symbols-outlined text-[#745853] cursor-pointer hover:opacity-80 transition-opacity">shopping_bag</span>
+</div>
+</div>
+</header>
+<main class="pt-16">
+<!-- Hero Section -->
+<section class="linen-texture min-h-[795px] flex flex-col justify-center items-center text-center px-6 relative overflow-hidden">
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[140%] h-[140%] opacity-10 pointer-events-none">
+<div class="w-full h-full bg-[radial-gradient(circle,rgba(116,88,83,0.2)_0%,transparent_70%)]"></div>
+</div>
+<div class="relative z-10 space-y-6">
+<h1 class="serif-text text-7xl md:text-9xl font-bold text-primary tracking-tighter leading-none mb-2">
+                    PARCHA²
+                </h1>
+<p class="font-body text-xl md:text-2xl text-on-surface-variant font-medium tracking-wide">
+                    Regalos que van a mil.
+                </p>
+<div class="pt-8">
+<button class="bg-primary text-on-primary px-12 py-5 rounded-lg font-bold text-lg hover:opacity-90 transition-all active:scale-95 shadow-xl shadow-primary/10">
+                        Ver catálogo
+                    </button>
+</div>
+</div>
+<!-- Editorial Image Accent -->
+<div class="mt-16 w-full max-w-5xl px-4 flex justify-end">
+<div class="w-2/3 md:w-1/3 aspect-[4/5] bg-surface-container-low overflow-hidden -rotate-2 shadow-2xl">
+<img class="w-full h-full object-cover" data-alt="high-end luxury gift box with premium brown ribbon and silk texture on cream paper background with soft cinematic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBw87KceH0XGTbfKTSCtMJeY4KD0qgSHZFvdvxRcWVdVgPpTnHjnlaNn2mFnOhhSCfdN8dbC-2xNYmiogcvaHc7WhZnpyEM6LA6RGz1oi67IF2mZ0ovNIbmbOnJi15cHBUseLsNSBvhkHROTXsofMuVGhNm1RAaQpgSqlBXFyWGmtF3IoTXnEIo-omhMdHrK86j0-SpFVUVS5CfIBobRb89nmROxo4F8i4P1pgHpxtHtyWDBEJMTaxcbFLwoAoFrXhTiTUSnKZYNk4"/>
+</div>
+</div>
+</section>
+<!-- Sobre Nosotros -->
+<section class="py-24 px-6 md:px-24 bg-surface flex flex-col md:flex-row items-center gap-16 overflow-hidden">
+<div class="w-full md:w-1/2">
+<div class="relative">
+<div class="absolute -top-4 -left-4 w-24 h-24 bg-secondary-container rounded-full opacity-50 -z-10"></div>
+<h2 class="serif-text text-4xl md:text-5xl font-bold text-primary mb-8 leading-tight">
+                        Creatividad con alma<br/>y motor.
+                    </h2>
+</div>
+<p class="font-body text-lg md:text-xl text-on-surface-variant leading-relaxed max-w-lg">
+                    Somos un grupo de jóvenes apasionados por la creatividad, el diseño, los carros y los dibujos animados. Creamos regalos pensados con detalle para quien los recibe.
+                </p>
+</div>
+<div class="w-full md:w-1/2 grid grid-cols-2 gap-4">
+<div class="aspect-square bg-surface-container-high rounded-lg overflow-hidden translate-y-8">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="stylized classic miniature car model on a clean designer desk with drafting tools and warm studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMZPfo4t3dITcfe9zlM_jiSeCBNY9YsfZJM646uhVOC8kzlOOsXY7NQ5_755_cIwGbcYBXyIHjocO6E7HZLe8n-kYO3lbafqqfslqoWaMf48m-PasYHMc2JbgykCl4phT8ayLKyC9b-AIvocPQYLJyM6T6yd9ct3voYjXbXsR0i49JkTXflrCGkZqsogGcVrGhK4XZw--drmQnOowrSqrS3_AeBt5Hn_Jlv8G8ak94jH9RvExzF4e_P_ZRnBcLHE3nGl6VkYfbdJE"/>
+</div>
+<div class="aspect-square bg-surface-container-high rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="artistic workspace with watercolor pens, aesthetic stickers, and a focused creative atmosphere on light wooden desk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWnzg9uKw8dWcNSd03SFH-L4XBWhU2S8trtuhzbqnE_nviNnVdPqr8SzfD_uEA6iND5qYpneBAMfXWM7XfPm5cJGov5pmjzSHHHJGWMiuIWIMtIABH5g2-9bMFfW7co54Fm8vpvd3kU7KHUpxB8fHyd3J0ViV4C_pDOjzmgHPqc8h7lsIEopu9LcxoYpSx_3vWWxlpy-wRMu4VyFdxK8D10pM9pfKkZppiI5OAgly6xf5eXuJ6ZCTcFGv6uUBZk7kPjLfG46yCtRI"/>
+</div>
+</div>
+</section>
+<!-- Catálogo de Productos (Bento-inspired Grid) -->
+<section class="py-24 px-6 md:px-12 bg-surface-container-low" id="catalogo">
+<div class="max-w-7xl mx-auto">
+<div class="flex justify-between items-end mb-16">
+<div>
+<span class="font-label text-sm uppercase tracking-[0.3em] text-outline mb-2 block">Nuestra Selección</span>
+<h2 class="serif-text text-5xl font-bold text-primary">El Catálogo</h2>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Llaveros F1 Card -->
+<div class="md:col-span-7 group cursor-pointer">
+<div class="bg-surface-container-lowest overflow-hidden aspect-[16/9] mb-6 shadow-sm hover:shadow-xl transition-all duration-500 rounded-xl">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="minimalist close-up of Formula 1 inspired metal keychains with team colors on textured leather surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHagoxkAJk2wqOm4_w0NJpGkQJTYbb2_UIFbYfo1C63CKQ3Ap0l2F032iW4TSNmLnKFzN_VK18hEew1pAs8h9Eh70-WY5YMH7tv1vDWZ20P99cfURVRD9ibl3Ds4wct5RocmwvEm-FXpXwl_LUi53PBJNVGKzZpjsIObUReldzNd3XaTDsfrmZVA-WyY3KIhLNnYYORaqTTGYz-Uk6MyV8jJiU54LffuEASTH5C3U8oRi_EzwZ6uDCd2-OZMezN3JI3xnyaVAL_uc"/>
+</div>
+<h3 class="serif-text text-3xl font-bold text-primary mb-2">Llaveros F1</h3>
+<p class="font-body text-on-surface-variant max-w-md">Equipos, pilotos y frases icónicas de radio para los que viven a mil.</p>
+<div class="mt-4 flex gap-2">
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest">Racing</span>
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest">Exclusivo</span>
+</div>
+</div>
+<!-- Productos Sanrio Card -->
+<div class="md:col-span-5 group cursor-pointer">
+<div class="bg-surface-container-lowest overflow-hidden aspect-square mb-6 shadow-sm hover:shadow-xl transition-all duration-500 rounded-xl">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="aesthetic Sanrio collection with pastel pink notebooks, stickers, and Hello Kitty stationery on a cream desk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBn36kUacrRNqT7CP0aOgtf8Wngs5Jw-69pSSI5WIZcRV8v8KRr5Y9NBYBJT-dwsBVyLjThqKUHUeMfZGUhbxcKJOz1XNpH2BiNFmRFk2qzJFtIYFE6DwDdwgxpLqPcG8so4DZJxzQ9t8MeBK33eUCHurtFtHhSnKCDQmfVtk2SSCRvSRmq3YIcs5Us_QPDtYreBVpJUDJo4-b1S6MHJfUlp04qpCNHzmVR2PzET9qWl5lgKEj30No8ikjnGIsDzBwvCuWRFVSaxAY"/>
+</div>
+<h3 class="serif-text text-3xl font-bold text-primary mb-2">Productos Sanrio</h3>
+<p class="font-body text-on-surface-variant">Papelería, stickers y ternura de Hello Kitty y Kuromi.</p>
+</div>
+<!-- Cajas Regalo Card -->
+<div class="md:col-span-12 group cursor-pointer mt-8">
+<div class="relative bg-primary overflow-hidden h-[400px] shadow-sm hover:shadow-2xl transition-all duration-500 rounded-xl">
+<img class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700" data-alt="luxury customized gift hamper with artisanal products and elegant wrapping in a warm cozy setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBokBpyEG_jfg1D2uLFLAqMn2lBlyAROcjT_aIDXu3ApjxX52jP2nrPCgU5ltNITLuJtZswFiAL1ngqM3wsfOfCyldx9AmLO6FEgbTqXSxln4y5zFPCX3f5xYOYw21y8hvmLSUWC47gG2m71eMV9V-FoJTkfYkBrZ7Zh5bFEWZoVQAAPVwW3oB4Zd784IydMy6w74L7A9fitYaPkQfVEsTop3hy1YyXZSr0782xSJ3mav2aOizRkas5w5uB7iv02_coZvBBj8SnBMA"/>
+<div class="absolute inset-0 flex flex-col justify-end p-12 bg-gradient-to-t from-primary/80 to-transparent">
+<h3 class="serif-text text-5xl font-bold text-on-primary mb-4">Cajas Regalo Personalizadas</h3>
+<p class="font-body text-on-primary/90 text-xl max-w-2xl">Bespoke boxes diseñadas desde cero. Tú pones la idea, nosotros la magia.</p>
+<div class="mt-6">
+<button class="bg-on-primary text-primary px-8 py-3 rounded-lg font-bold">Cotizar ahora</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ¿Por qué elegirnos? -->
+<section class="py-24 px-6 md:px-24 bg-surface overflow-hidden">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="text-center space-y-4">
+<div class="w-16 h-16 bg-surface-container mx-auto flex items-center justify-center rounded-full text-primary">
+<span class="material-symbols-outlined text-4xl">auto_awesome</span>
+</div>
+<h4 class="serif-text text-xl font-bold text-primary">Personalización total</h4>
+<p class="font-body text-on-surface-variant text-sm">Cada detalle es ajustado a tus gustos y necesidades.</p>
+</div>
+<div class="text-center space-y-4">
+<div class="w-16 h-16 bg-surface-container mx-auto flex items-center justify-center rounded-full text-primary">
+<span class="material-symbols-outlined text-4xl">bolt</span>
+</div>
+<h4 class="serif-text text-xl font-bold text-primary">Entrega en 5 días</h4>
+<p class="font-body text-on-surface-variant text-sm">Velocidad real para tus momentos especiales.</p>
+</div>
+<div class="text-center space-y-4">
+<div class="w-16 h-16 bg-surface-container mx-auto flex items-center justify-center rounded-full text-primary">
+<span class="material-symbols-outlined text-4xl">diamond</span>
+</div>
+<h4 class="serif-text text-xl font-bold text-primary">Productos únicos</h4>
+<p class="font-body text-on-surface-variant text-sm">Diseños que no encontrarás en ningún otro lugar.</p>
+</div>
+<div class="text-center space-y-4">
+<div class="w-16 h-16 bg-surface-container mx-auto flex items-center justify-center rounded-full text-primary">
+<span class="material-symbols-outlined text-4xl">sell</span>
+</div>
+<h4 class="serif-text text-xl font-bold text-primary">Precios accesibles</h4>
+<p class="font-body text-on-surface-variant text-sm">Calidad premium sin comprometer tu bolsillo.</p>
+</div>
+</div>
+</section>
+<!-- Cómo pedir -->
+<section class="py-24 px-6 md:px-12 bg-surface-container">
+<div class="max-w-5xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="serif-text text-5xl font-bold text-primary mb-4">Haz tu pedido</h2>
+<p class="font-body text-on-surface-variant">Simple, rápido y personalizado.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
+<!-- Connection Line -->
+<div class="hidden md:block absolute top-1/2 left-0 w-full h-[1px] bg-outline-variant/30 -translate-y-1/2 -z-0"></div>
+<div class="relative z-10 text-center space-y-6">
+<div class="w-12 h-12 bg-primary text-on-primary rounded-full flex items-center justify-center font-bold text-xl mx-auto">1</div>
+<h5 class="serif-text text-2xl font-bold text-primary">Elige</h5>
+<p class="font-body text-on-surface-variant">Explora nuestro catálogo y selecciona tu favorito.</p>
+</div>
+<div class="relative z-10 text-center space-y-6">
+<div class="w-12 h-12 bg-primary text-on-primary rounded-full flex items-center justify-center font-bold text-xl mx-auto">2</div>
+<h5 class="serif-text text-2xl font-bold text-primary">Personaliza</h5>
+<p class="font-body text-on-surface-variant">Dinos qué detalles quieres agregar o cambiar.</p>
+</div>
+<div class="relative z-10 text-center space-y-6">
+<div class="w-12 h-12 bg-primary text-on-primary rounded-full flex items-center justify-center font-bold text-xl mx-auto">3</div>
+<h5 class="serif-text text-2xl font-bold text-primary">Recibe</h5>
+<p class="font-body text-on-surface-variant">En 5 días hábiles tu regalo llegará a la puerta.</p>
+</div>
+</div>
+<div class="mt-20 flex flex-col md:flex-row justify-center gap-6">
+<a class="flex items-center justify-center space-x-3 bg-[#25D366] text-white px-10 py-4 rounded-xl font-bold shadow-lg hover:scale-105 transition-transform" href="#">
+<span class="material-symbols-outlined">chat</span>
+<span>WhatsApp</span>
+</a>
+<a class="flex items-center justify-center space-x-3 bg-primary text-on-primary px-10 py-4 rounded-xl font-bold shadow-lg hover:scale-105 transition-transform" href="#">
+<span class="material-symbols-outlined">photo_camera</span>
+<span>Instagram</span>
+</a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 px-8 bg-[#fafcda] dark:bg-[#2d1d1a] text-center flex flex-col items-center space-y-6 mb-20 md:mb-0">
+<div class="font-['Noto_Serif'] text-3xl font-bold text-[#3E2723] mb-2 tracking-tighter">PARCHA²</div>
+<p class="font-['Manrope'] text-sm tracking-normal text-[#745853] dark:text-[#fbddc8]">
+            Esto es PARCHA², donde cada regalo vale por 2.
+        </p>
+<div class="flex space-x-8 py-4">
+<a class="text-[#63683a] hover:text-[#3E2723] transition-colors" href="#">WhatsApp</a>
+<a class="text-[#63683a] hover:text-[#3E2723] transition-colors" href="#">Instagram</a>
+<a class="text-[#63683a] hover:text-[#3E2723] transition-colors" href="#">Términos</a>
+<a class="text-[#63683a] hover:text-[#3E2723] transition-colors" href="#">Preguntas</a>
+</div>
+<p class="font-['Manrope'] text-xs text-[#745853]/60 uppercase tracking-[0.2em] mt-8">
+            © 2024 PARCHA². Regalos que van a mil.
+        </p>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pt-2 pb-6 bg-[#fefee5] dark:bg-[#3E2723] border-t border-[#b8bd88]/20 z-50 shadow-[0_-4px_20px_rgba(62,39,35,0.05)] rounded-t-xl">
+<a class="flex flex-col items-center justify-center bg-[#fbddc8] dark:bg-[#674c47] text-[#624e3e] dark:text-[#fefee5] rounded-xl px-4 py-1 translate-y-[-2px] transition-all duration-300" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-['Manrope'] text-[10px] uppercase tracking-widest font-semibold mt-1">Inicio</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#63683a] dark:text-[#b8bd88] px-4 py-1 hover:text-[#745853] transition-colors" href="#catalogo">
+<span class="material-symbols-outlined">grid_view</span>
+<span class="font-['Manrope'] text-[10px] uppercase tracking-widest font-semibold mt-1">Catálogo</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#63683a] dark:text-[#b8bd88] px-4 py-1 hover:text-[#745853] transition-colors" href="#">
+<span class="material-symbols-outlined">auto_awesome</span>
+<span class="font-['Manrope'] text-[10px] uppercase tracking-widest font-semibold mt-1">Personalizar</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#63683a] dark:text-[#b8bd88] px-4 py-1 hover:text-[#745853] transition-colors" href="#">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="font-['Manrope'] text-[10px] uppercase tracking-widest font-semibold mt-1">Carrito</span>
+</a>
+</nav>
+</body></html>
